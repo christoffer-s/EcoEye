@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Feed</title>
+</head>
+<body>
+    <h1>Video Feed with Object Detection</h1>
+    <form action="/set_classes" method="POST">
+        <label for="classes">Enter classes to detect (comma-separated):</label>
+        <input type="text" name="classes" id="classes">
+        <button type="submit">Set Classes</button>
+    </form>
+    <img src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+</body>
+</html>

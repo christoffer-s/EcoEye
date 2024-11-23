@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Livestream fra kameraet</title>
+</head>
+<body>
+    <h1>Livestream fra kameraet</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    <h1>Kart</h1>
+    <img src="{{ url_for('kart_feed') }}" width="640" height="480">
+</body>
+</html>

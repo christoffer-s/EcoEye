@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Livestream og Motorstyring</title>
+    <script>
+        function move(direction) {
+            fetch('/move', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `direction=${direction}`
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Livestream fra kameraet</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    
+    <h2>Styr Steppermotorer</h2>
+    <button onclick="move('right')">Høyre</button>
+    <button onclick="move('left')">Venstre</button>
+    <button onclick="move('up')">Opp</button>
+    <button onclick="move('down')">Ned</button>
+</body>
+</html>
